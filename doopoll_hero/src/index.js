@@ -4,7 +4,6 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import Hero from "./components/hero/hero";
-import Heroes from "./components/hero/heroes";
 import Avatar from "./components/avatar/avatar";
 
 ReactDOM.render(<Hero />, document.getElementById("root"));
