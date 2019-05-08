@@ -3,10 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import Hero from "./components/heroes/hero";
-import Heroes from "./components/heroes/heroes";
+import Hero from "./components/hero/hero";
+import Heroes from "./components/hero/heroes";
+import Avatar from "./components/avatar/avatar";
 
-ReactDOM.render(<Heroes />, document.getElementById("root"));
+ReactDOM.render(<Hero />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
