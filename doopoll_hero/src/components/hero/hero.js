@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import "./hero.css";
 import Avatar from "../avatar/avatar";
 import Mask from "../mask/mask";
 import ColourOptions from "../colourOptions/colourOptions";
+import image from "../../assets/skill/batman.png";
 
 function importAll(r) {
   return r.keys().map(r);
@@ -19,7 +21,8 @@ class Hero extends Component {
     this.state = {
       maskIndex: null,
       pet: null,
-      colour: null
+      colour: null,
+      animateIt: false
     };
     this.click = this.click.bind(this);
     this.selectColour = this.selectColour.bind(this);
@@ -43,7 +46,6 @@ class Hero extends Component {
       backgroundColor: this.state.colour
     };
     console.log(images);
-
     return (
       <div>
         <div style={style}>
@@ -53,6 +55,16 @@ class Hero extends Component {
         <span onClick={() => this.click(-1)}>previous</span>
         <span onClick={() => this.click(1)}>next</span>
         <ColourOptions colours={COLOURS} selectColour={this.selectColour} />
+        <button onClick={() => this.setState({ animateIt: true })}>
+          show power
+        </button>
+        <img
+          src={image}
+          className="skill"
+          style={{
+            animationPlayState: this.state.animateIt ? "running" : "paused"
+          }}
+        />
       </div>
     );
   }
