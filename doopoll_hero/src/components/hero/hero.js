@@ -31,14 +31,15 @@ class Hero extends Component {
         roleIsSet: false
       },
       heroName: "",
-      animalSelected: false,
+      selectedAniaml: null,
       maskIndex: null,
-      animalShowed: [false, false, false],
+      animalIndex: [false, false, false],
       pet: null,
       colour: null,
       animateIt: false
     };
     this.setName = this.setName.bind(this);
+    this.setAnimal = this.setAnimal.bind(this);
     this.click = this.click.bind(this);
     this.selectColour = this.selectColour.bind(this);
     this.selectAnimal = this.selectAnimal.bind(this);
@@ -49,6 +50,14 @@ class Hero extends Component {
     if (this.state.heroName !== null) {
       let heroStatus = { ...this.state.heroStatus };
       heroStatus.nameIsSet = true;
+      this.setState({ heroStatus });
+    }
+  }
+
+  setAnimal() {
+    if (this.state.selectAnimal !== null) {
+      let heroStatus = { ...this.state.heroStatus };
+      heroStatus.animalIsSet = true;
       this.setState({ heroStatus });
     }
   }
@@ -65,9 +74,9 @@ class Hero extends Component {
   }
 
   selectAnimal(index) {
-    let newAnimalArr = Array(this.state.animalShowed.length).fill(false);
+    let newAnimalArr = Array(this.state.animalIndex.length).fill(false);
     newAnimalArr.splice(index, 1, true);
-    this.setState({ animalShowed: newAnimalArr });
+    this.setState({ animalIndex: newAnimalArr });
   }
 
   handleInput(e) {
@@ -93,21 +102,36 @@ class Hero extends Component {
           </div>
         )}
 
-        {
+        {heroStatus.nameIsSet && !heroStatus.animalIsSet && (
           <div className="view-set-animal">
             <div className="container-inner sector-lg">
               <h1>Select Your Hero Animal</h1>
-              <Avatars
-                isShowed={this.state.animalShowed}
-                isSelected={this.state.animalSelected}
-                selectAnimal={this.selectAnimal}
-              />
-            </div>
-
-            <div>
-              <Mask mask={images[this.state.maskIndex]} />
+              <div className="container-animals">
+                <Avatars
+                  isShowed={this.state.animalIndex}
+                  selectAnimal={this.selectAnimal}
+                />
+              </div>
+              <button onClick={this.setAnimal}>confirm</button>
             </div>
           </div>
+        )}
+
+        {
+          // <div className="view-set-role">
+          //   <div className="container-inner">
+          //     <h1>Select The Hero You Want To Play</h1>
+          //
+          //     <Avatar
+          //       isShowed={true}
+          //       selectAnimal={this.selectAnimal}
+          //       imgSrc={ANIMALS[0]}
+          //     />
+          //<div>
+          //  <Mask mask={images[this.state.maskIndex]} />
+          //</div>
+          //   </div>
+          // </div>
         }
 
         {

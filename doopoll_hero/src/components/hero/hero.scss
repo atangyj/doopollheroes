@@ -28,18 +28,24 @@ body {
   background-color: $blueMain;
 }
 
+// GENERAL
+.sector-sm {
+  max-width: 450px;
+}
+.sector-md {
+  max-width: 750px;
+}
+.sector-lg {
+  max-width: 1200px;
+}
+
 /* START VIEW */
 .view-set-name,
-.view-set-animal {
+.view-set-animal,
+.view-set-role {
   height: 100vh;
   text-align: center;
   position: relative;
-  .sector-md {
-    max-width: 750px;
-  }
-  .sector-lg {
-    max-width: 1200px;
-  }
   .container-inner {
     width: 100%;
     position: absolute;
@@ -84,6 +90,20 @@ body {
 }
 
 /* SET ANIMAL VIEW */
-.view-set-animal {
-  text-align: center;
+.container-animals {
+  padding-bottom: 3rem;
+}
+
+button {
+  padding: 0 1.5rem;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  background-color: #fef382;
+  color: $yellowDark;
+  border-radius: 5px;
+  border-left: 5px solid $yellowDark;
+  border-bottom: 5px solid $yellowDark;
+  border-right: 5px solid #fbf6d3;
+  border-top: 5px solid #fbf6d3;
+  box-shadow: -4px 4px #111;
 }
