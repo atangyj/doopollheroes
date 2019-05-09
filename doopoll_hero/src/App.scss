@@ -1,4 +1,4 @@
-@import "../../sass/colour.scss";
+@import "./sass/colour.scss";
 
 @keyframes showSkill {
   0% {
@@ -30,13 +30,16 @@ body {
 
 // GENERAL
 .sector-sm {
-  max-width: 450px;
+  max-width: 300px;
+  margin: auto;
 }
 .sector-md {
   max-width: 750px;
+  margin: auto;
 }
 .sector-lg {
   max-width: 1200px;
+  margin: auto;
 }
 
 /* START VIEW */
@@ -92,6 +95,37 @@ body {
 /* SET ANIMAL VIEW */
 .container-animals {
   padding-bottom: 3rem;
+}
+
+.container-mask {
+  position: relative;
+}
+
+.hero-mask {
+  width: 90%;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+}
+
+.btn-pre,
+.btn-next {
+  position: absolute;
+  font-size: 4rem;
+  top: 50%;
+  color: $yellowMain;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-pre {
+  left: -25%;
+}
+
+.btn-next {
+  right: -25%;
 }
 
 button {

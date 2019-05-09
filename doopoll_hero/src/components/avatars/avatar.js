@@ -1,6 +1,6 @@
 import React from "react";
 
-const avatar = ({ size = "100%", isShowed, selectAnimal, imgSrc }) => {
+const avatar = ({ size = "100%", isShowed = true, selectAnimal, imgSrc }) => {
   const style = {
     width: size,
     height: "auto",

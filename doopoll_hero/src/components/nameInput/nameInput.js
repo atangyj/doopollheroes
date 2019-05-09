@@ -9,13 +9,13 @@ const nameInput = ({ heroName, handleInput, setName }) => {
         value={heroName}
         onChange={handleInput}
         onKeyPress={e => {
-          if (e.charCode == 13) setName();
+          if (e.charCode == 13) setName("name");
         }}
         autoFocus
       />
       <span
         className="btn"
-        onClick={setName}
+        onClick={() => setName("name")}
         style={{ color: heroName ? "#cddffe" : "#044ac3" }}
       >
         &#8594;
