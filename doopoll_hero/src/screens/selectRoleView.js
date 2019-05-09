@@ -4,10 +4,10 @@ import Mask from "../components/mask/mask";
 import ColourOptions from "../components/colourOptions/colourOptions";
 
 const selectRoleView = props => (
-  <div className="view-set-role">
-    <div className="container-inner">
+  <div className="container-outer">
+    <div className="container-center">
       <h1>Select The Hero You Want To Play</h1>
-      <div className="container-mask sector-sm container-animals">
+      <div className="container-mask sector-sm">
         <Avatar
           isShowed={true}
           selectAnimal={props.selectAnimal}
@@ -20,8 +20,8 @@ const selectRoleView = props => (
         <span className="btn-next" onClick={() => props.selectRole(1)}>
           &rarr;
         </span>
-        <button onClick={() => props.setHeroStatus("role")}>confirm</button>
       </div>
+      <button onClick={() => props.setHeroStatus("role")}>Confirm</button>
     </div>
   </div>
 );

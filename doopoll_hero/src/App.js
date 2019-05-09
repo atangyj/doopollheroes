@@ -40,12 +40,11 @@ class App extends Component {
 
   setHeroStatus(statusType) {
     let heroValue = this.state.heroValue[statusType];
-    let stageValue = this.state.settingStage;
 
     if (heroValue !== "") {
       let heroStatus = { ...this.state.heroStatus };
       heroStatus[statusType] = true;
-      this.setState({ heroStatus, settingStage: stageValue + 1 });
+      this.setState({ heroStatus });
     }
   }
 
@@ -125,25 +124,6 @@ class App extends Component {
             createHero={this.createHero}
           />
         )}
-
-        {
-          // <button onClick={() => this.setState({ animateIt: true })}>
-          //   show power
-          // </button>
-          // <button onClick={() => this.setState({ animalSelected: true })}>
-          //   confirm
-          // </button>
-        }
-
-        {
-          // <img
-          //   src={image}
-          //   className="skill"
-          //   style={{
-          //     animationPlayState: this.state.animateIt ? "running" : "paused"
-          //   }}
-          // />
-        }
       </div>
     );
   }

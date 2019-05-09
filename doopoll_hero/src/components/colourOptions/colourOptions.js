@@ -10,8 +10,8 @@ const colourOptions = props => {
       height: "3rem",
       borderRadius: "3rem",
       border: "5px solid #fff",
-      display: "inline-block",
-      margin: ".5rem"
+      display: "block",
+      margin: ".8rem"
     };
     return (
       <li key={i} style={style} onClick={() => props.selectColour(colour)} />

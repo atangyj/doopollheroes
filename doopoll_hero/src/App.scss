@@ -1,34 +1,25 @@
 @import "./sass/colour.scss";
 
-@keyframes showSkill {
-  0% {
-    bottom: 0;
-  }
-  25% {
-    bottom: 20%;
-  }
-  50% {
-    bottom: 50%;
-  }
-  75% {
-    bottom: 70%;
-  }
-  100% {
-    bottom: 100%;
-  }
-}
+// GENERAL
 
-.skill {
-  position: absolute;
-  bottom: 0;
-  animation-name: showSkill;
-  animation-duration: 4s;
-}
 body {
   background-color: $blueMain;
 }
 
-// GENERAL
+.container-outer {
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+.container-center {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .sector-sm {
   max-width: 300px;
   margin: auto;
@@ -42,60 +33,60 @@ body {
   margin: auto;
 }
 
-/* START VIEW */
-.view-set-name,
-.view-set-animal,
-.view-set-role {
-  height: 100vh;
-  text-align: center;
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: $yellowMain;
+  margin-bottom: 3rem;
+}
+
+button,
+.label-hero-name {
+  display: inline-block;
+  padding: 0 1.5rem;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  background-color: #fef382;
+  color: $yellowDark;
+  border-radius: 5px;
+  border-left: 5px solid $yellowDark;
+  border-bottom: 5px solid $yellowDark;
+  border-right: 5px solid #fbf6d3;
+  border-top: 5px solid #fbf6d3;
+  margin: 3rem 0.5rem 0 0.5rem;
+}
+
+// LANDING VIEW
+.container-input {
   position: relative;
-  .container-inner {
+  line-height: 3rem;
+  font-size: 1.5rem;
+  color: $blueLight;
+  input {
+    color: inherit;
+    line-height: inherit;
+    font-size: inherit;
     width: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      color: $yellowMain;
-      margin-bottom: 3rem;
-    }
-    .container-input {
-      position: relative;
-      line-height: 3rem;
-      font-size: 1.5rem;
+    padding-left: 1rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: 2px solid $blueLight;
+    &::placeholder {
       color: $blueLight;
-      input {
-        color: inherit;
-        line-height: inherit;
-        font-size: inherit;
-        width: 100%;
-        padding-left: 1rem;
-        background-color: rgba(0, 0, 0, 0);
-        border: none;
-        border-bottom: 2px solid $blueLight;
-        &::placeholder {
-          color: $blueLight;
-        }
-      }
-      .btn {
-        display: inline-block;
-        position: absolute;
-        right: 0;
-        top: 0;
-        &:hover {
-          cursor: pointer;
-        }
-      }
+    }
+  }
+  .btn-arrow {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    &:hover {
+      cursor: pointer;
     }
   }
 }
 
-/* SET ANIMAL VIEW */
-.container-animals {
-  padding-bottom: 3rem;
-}
+//  SELECT ROLE VIEW
 
 .container-mask {
   position: relative;
@@ -128,16 +119,10 @@ body {
   right: -25%;
 }
 
-button {
-  padding: 0 1.5rem;
-  font-size: 1.8rem;
-  line-height: 3rem;
-  background-color: #fef382;
-  color: $yellowDark;
-  border-radius: 5px;
-  border-left: 5px solid $yellowDark;
-  border-bottom: 5px solid $yellowDark;
-  border-right: 5px solid #fbf6d3;
-  border-top: 5px solid #fbf6d3;
-  box-shadow: -4px 4px #111;
+// SELECT COLOUR VIEW
+.container-colour {
+  position: absolute;
+  right: -40%;
+  top: 0;
+  transform: translateY(50%);
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-const nameInput = ({ heroName, handleInput, setName }) => {
+const nameInput = ({ heroName, handleInput, setHeroStatus }) => {
   return (
     <div className="container-input">
       <input
@@ -9,13 +9,13 @@ const nameInput = ({ heroName, handleInput, setName }) => {
         value={heroName}
         onChange={handleInput}
         onKeyPress={e => {
-          if (e.charCode == 13) setName("name");
+          if (e.charCode == 13) setHeroStatus("name");
         }}
         autoFocus
       />
       <span
-        className="btn"
-        onClick={() => setName("name")}
+        className="btn-arrow"
+        onClick={() => setHeroStatus("name")}
         style={{ color: heroName ? "#cddffe" : "#044ac3" }}
       >
         &#8594;

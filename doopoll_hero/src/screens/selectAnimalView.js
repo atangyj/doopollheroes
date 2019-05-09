@@ -5,10 +5,8 @@ const selectAnimalView = props => (
   <div className="view-set-animal">
     <div className="container-inner sector-lg">
       <h1>Select Your Hero Animal</h1>
-      <div className="container-animals">
-        <Avatars isShowed={props.isShowed} selectAnimal={props.selectAnimal} />
-      </div>
-      <button onClick={() => props.setHeroStatus("animal")}>confirm</button>
+      <Avatars isShowed={props.isShowed} selectAnimal={props.selectAnimal} />
+      <button onClick={() => props.setHeroStatus("animal")}>Confirm</button>
     </div>
   </div>
 );
