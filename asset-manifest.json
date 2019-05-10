@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/doopollheroes/static/css/main.6f82d709.chunk.css",
+    "main.js": "/doopollheroes/static/js/main.6b041d84.chunk.js",
+    "main.js.map": "/doopollheroes/static/js/main.6b041d84.chunk.js.map",
+    "runtime~main.js": "/doopollheroes/static/js/runtime~main.84d1ff2c.js",
+    "runtime~main.js.map": "/doopollheroes/static/js/runtime~main.84d1ff2c.js.map",
+    "static/js/2.5ceca9b3.chunk.js": "/doopollheroes/static/js/2.5ceca9b3.chunk.js",
+    "static/js/2.5ceca9b3.chunk.js.map": "/doopollheroes/static/js/2.5ceca9b3.chunk.js.map",
+    "index.html": "/doopollheroes/index.html",
+    "precache-manifest.3c28daa6c92641565e1f20f7596972ed.js": "/doopollheroes/precache-manifest.3c28daa6c92641565e1f20f7596972ed.js",
+    "service-worker.js": "/doopollheroes/service-worker.js",
+    "static/css/main.6f82d709.chunk.css.map": "/doopollheroes/static/css/main.6f82d709.chunk.css.map",
+    "static/media/batman.png": "/doopollheroes/static/media/batman.5209cbfb.png",
+    "static/media/birdy.png": "/doopollheroes/static/media/birdy.c9c73580.png",
+    "static/media/catwoman.png": "/doopollheroes/static/media/catwoman.e09379ce.png",
+    "static/media/doge.png": "/doopollheroes/static/media/doge.c118ceb8.png",
+    "static/media/raccoon.png": "/doopollheroes/static/media/raccoon.96bb46ec.png",
+    "static/media/thor.png": "/doopollheroes/static/media/thor.e2d4e95a.png"
+  }
+}
