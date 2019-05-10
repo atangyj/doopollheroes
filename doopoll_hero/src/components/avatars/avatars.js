@@ -11,14 +11,14 @@ const ANIMALS = importAll(
 
 const avatars = ({ isShowed, selectAnimal }) => {
   const animalList = ANIMALS.map((animal, i) => {
-    const style = {
-      width: "30%",
-      padding: "0 2rem",
-      height: "auto",
-      filter: isShowed[i] ? "brightness(100%)" : "brightness(0%)"
-    };
     return (
-      <img key={i} src={animal} onClick={() => selectAnimal(i)} style={style} />
+      <Avatar
+        size="30%"
+        padding="0 2rem"
+        imgSrc={animal}
+        isShowed={isShowed[i]}
+        selectAnimal={() => selectAnimal(i)}
+      />
     );
   });
   return animalList;
