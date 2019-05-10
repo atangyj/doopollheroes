@@ -1,7 +1,6 @@
 @import "./sass/colour.scss";
 
 // GENERAL
-
 body {
   background-color: $blueMain;
 }
@@ -117,6 +116,28 @@ button,
 
 .btn-next {
   right: -25%;
+}
+
+// ANIMATION
+@keyframes showSuperpower {
+  from {
+    top: 100%;
+    opacity: 1;
+  }
+  to {
+    top: 0%;
+    opacity: 0;
+  }
+}
+
+.superpower {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  opacity: 1;
+  animation-name: showSuperpower;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 // SELECT COLOUR VIEW

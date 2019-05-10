@@ -1,6 +1,7 @@
 import React from "react";
 import Avatar from "../components/avatars/avatar";
 import Mask from "../components/mask/mask";
+import { SKILLS } from "../data/heroData";
 
 const selectRoleView = props => (
   <div className="container-outer">
@@ -20,7 +21,20 @@ const selectRoleView = props => (
           &rarr;
         </span>
       </div>
+      <button onClick={props.showPower}>
+        {props.isShowingPower ? "Stop" : "Show Superpower"}
+      </button>
       <button onClick={() => props.setHeroStatus("role")}>Confirm</button>
+    </div>
+    <div
+      className="superpower"
+      style={{
+        animationPlayState: props.isShowingPower ? "running" : "paused"
+      }}
+    >
+      <img src={SKILLS[props.skillIndex]} alt="skill" />
+      <img src={SKILLS[props.skillIndex]} alt="skill" />
+      <img src={SKILLS[props.skillIndex]} alt="skill" />
     </div>
   </div>
 );

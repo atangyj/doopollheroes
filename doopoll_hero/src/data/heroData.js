@@ -10,4 +10,8 @@ export const ANIMALS = importAll(
   require.context("../assets/animals/", false, /\.(png|jpe?g|svg)$/)
 );
 
+export const SKILLS = importAll(
+  require.context("../assets/skill/", false, /\.(png|jpe?g|svg)$/)
+);
+
 export const COLOURS = ["#FFEBE9", "#021C4B", "#000"];

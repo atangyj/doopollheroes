@@ -23,7 +23,8 @@ class App extends Component {
         role: 0,
         colour: ""
       },
-      animalIndex: [false, false, false]
+      animalIndex: [false, false, false],
+      isShowingPower: false
     };
     this.setHeroStatus = this.setHeroStatus.bind(this);
     this.selectRole = this.selectRole.bind(this);
@@ -31,6 +32,12 @@ class App extends Component {
     this.selectAnimal = this.selectAnimal.bind(this);
     this.handleInput = this.handleInput.bind(this);
     this.createHero = this.createHero.bind(this);
+    this.showPower = this.showPower.bind(this);
+  }
+
+  showPower() {
+    const value = this.state.isShowingPower;
+    this.setState({ isShowingPower: !value });
   }
 
   setHeroStatus(statusType) {
@@ -88,7 +95,6 @@ class App extends Component {
             setHeroStatus={this.setHeroStatus}
           />
         )}
-
         {heroStatus.name && !heroStatus.animal && (
           <SelectAnimalView
             isShowed={this.state.animalIndex}
@@ -96,17 +102,18 @@ class App extends Component {
             setHeroStatus={this.setHeroStatus}
           />
         )}
-
         {heroStatus.animal && !heroStatus.role && (
           <SelectRoleView
             imgSrc={ANIMALS[heroValue.animal]}
             mask={MASKS[heroValue.role]}
+            skillIndex={heroValue.role}
             selectRole={this.selectRole}
             setHeroStatus={this.setHeroStatus}
+            showPower={this.showPower}
+            isShowingPower={this.state.isShowingPower}
           />
         )}
-
-        {heroValue.role && (
+        {heroStatus.role && (
           <SelectColourView
             colours={COLOURS}
             heroName={heroValue.name}
