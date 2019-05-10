@@ -1,7 +1,5 @@
 import React from "react";
 
-const COLOURS = ["#FFEBE9", "#021C4B", "#FED746"];
-
 const colourOptions = props => {
   const colours = props.colours.map((colour, i) => {
     const style = {

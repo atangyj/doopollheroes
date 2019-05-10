@@ -3,8 +3,6 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import Hero from "./components/hero/hero";
-import Avatar from "./components/avatar/avatar";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 

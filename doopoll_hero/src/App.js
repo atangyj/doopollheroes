@@ -4,11 +4,6 @@ import LandingView from "./screens/landingView";
 import SelectAnimalView from "./screens/selectAnimalView";
 import SelectRoleView from "./screens/selectRoleView";
 import SelectColourView from "./screens/selectColourView";
-import Avatar from "./components/avatar/avatar";
-import Avatars from "./components/avatar/avatars";
-import Mask from "./components/mask/mask";
-import ColourOptions from "./components/colourOptions/colourOptions";
-import NameInput from "./components/nameInput/nameInput";
 import { MASKS, ANIMALS, COLOURS } from "./data/heroData";
 
 class App extends Component {

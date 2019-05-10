@@ -9,7 +9,7 @@ const nameInput = ({ heroName, handleInput, setHeroStatus }) => {
         value={heroName}
         onChange={handleInput}
         onKeyPress={e => {
-          if (e.charCode == 13) setHeroStatus("name");
+          if (e.charCode === 13) setHeroStatus("name");
         }}
         autoFocus
       />

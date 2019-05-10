@@ -13,7 +13,7 @@ const avatar = ({
     padding: padding,
     filter: isShowed ? "brightness(100%)" : "brightness(0%)"
   };
-  return <img src={imgSrc} onClick={selectAnimal} style={style} />;
+  return <img src={imgSrc} onClick={selectAnimal} style={style} alt="animal" />;
 };
 
 export default avatar;

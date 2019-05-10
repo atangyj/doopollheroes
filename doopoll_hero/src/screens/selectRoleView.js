@@ -1,7 +1,6 @@
 import React from "react";
 import Avatar from "../components/avatars/avatar";
 import Mask from "../components/mask/mask";
-import ColourOptions from "../components/colourOptions/colourOptions";
 
 const selectRoleView = props => (
   <div className="container-outer">
