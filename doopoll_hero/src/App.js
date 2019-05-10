@@ -20,7 +20,7 @@ class App extends Component {
       heroValue: {
         name: "",
         animal: "",
-        role: "",
+        role: 0,
         colour: ""
       },
       animalIndex: [false, false, false]

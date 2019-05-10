@@ -13,6 +13,7 @@ const avatars = ({ isShowed, selectAnimal }) => {
   const animalList = ANIMALS.map((animal, i) => {
     return (
       <Avatar
+        key={i}
         size="30%"
         padding="0 2rem"
         imgSrc={animal}
